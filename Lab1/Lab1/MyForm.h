@@ -14,7 +14,8 @@ namespace Lab1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-	public:
+	
+		
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -64,6 +65,7 @@ namespace Lab1 {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// pictureBox1
 			// 
@@ -87,5 +89,9 @@ namespace Lab1 {
 
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+
+	}
 	};
 }
